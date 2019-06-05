@@ -8,11 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
-import Header from "../header/header"
-import Footer from "../footer/footer"
 import "../../styles/styles.scss"
 import sass from "./layout.module.scss"
+
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,16 +24,8 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div>
-        {/* Header */}
-        <Pane>
-
-        </Pane>
-        {/* About */}
-        <Pane>
-
-        </Pane>
-        {}
+      <div className={sass.layoutContainer}>
+        {children}
       </div>
     )}
   />
