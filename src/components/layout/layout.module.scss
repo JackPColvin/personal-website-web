@@ -1,14 +1,16 @@
-.container{
-    margin: 0 auto;
-    max-width: 1280px;
-    padding: 1rem;
-    
+.layoutContainer{
+    min-height:100vh;
     display:flex;
     flex-direction: column;
-    min-height: 65vh;
-    min-width:256px;
+    background-color:rgb(29, 29, 29);
+    min-height: 200vh;
+    min-width:600px;
 }
 
-.mainContainer{
-
+// General Pane Properties
+// All first-layer divs must be Panes.
+.layoutContainer > div {
+    flex: 1;
+    min-height:100vh;
+    max-height:800px;
 }
