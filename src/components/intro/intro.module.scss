@@ -3,11 +3,9 @@
 // flex-basis
 
 
-div{
+.pane{
     flex: 1;
     min-height: 100%;
-}
-.pane{
     text-align: center;
     display: flex;
     background:rgb(0, 236, 253) url("../../images/splatter.png") right bottom no-repeat;

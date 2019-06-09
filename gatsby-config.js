@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Jack Colvin's Personal Website`,
-    description: `A talented new grad, Jack is seeking challenging full stack role.`,
+    description: `A talented new grad, Jack is seeking a challenging full stack role.`,
     author: `@jackpcolvin`,
   },
   plugins: [
@@ -9,9 +9,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        fieldName: 'personalgraphql',
+        url: 'http://localhost:8080/v1/graphql',
+        typeName: 'PersonalGraphQL',
+        refetchInterval: 60,
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
