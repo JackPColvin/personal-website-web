@@ -16,15 +16,17 @@
 
 .bitmoji{
     flex:1;
-    min-height:50vh;
     display: flex;
 }
 .bitmoji > .bitmojiImage{
     margin: 0 auto;
+    // min-width: 30vw;
+    object-fit: scale-down;
+    // max-height: 700px;
 }
 
 .parallax > .funFacts{
-    flex:1;
+    flex:4;
     min-height:50vh;
     display: flex;
 }

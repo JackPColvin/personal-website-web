@@ -32,6 +32,7 @@ export const query = graphql`
     query IndexQuery{
         personalgraphql{
             projects{
+                id
                 title
                 blurb
                 bullets

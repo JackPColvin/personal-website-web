@@ -7,13 +7,11 @@ class ProjectTabs extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            activeTab: this.props.children[0]
+            activeTab: this.props.activeTab,
+            onClick: this.props.onClick
         }
     }
 
-    onClickTabItem = (tab) => {
-        this.setState({activeTab: tab})
-    }
     render() {
         const {
             props:{
@@ -24,26 +22,26 @@ class ProjectTabs extends React.Component {
             },
             onClickTabItem
         } = this;
-        return (<div className={sass.pane}>
+        return (
             <div className={sass.tabs}>
                 <ol className={sass.tabList}>
                     {
                         this.props.children.map((child) => {
                             return (
                                 <ProjectTab
+                                    activeTab={this.state.activeTab}
                                     project = {child}
-                                    activeTab={activeTab}
-                                    onClick={onClickTabItem}
-                                    label = {child.title}
+                                    key = {child.id}
+                                    label = {child.id}
+                                    onClick={this.state.onClick}
                                 >
-                                    
                                 </ProjectTab>
                             )
                         })
                     }
                 </ol>
             </div>
-        </div>)
+        )
     }
 }
 export default ProjectTabs

@@ -1,7 +1,11 @@
-.tabListItem{
-    padding: 10px;
-    border:2px solid white;
+.tabListItem,.tabListActive{
+    border: 1px solid #AAA;
 }
+
+ol > div.tabListActive{
+    background-color:blue;
+}
+
 .top{
     font-size: 25px;
     color: #00F1FB;

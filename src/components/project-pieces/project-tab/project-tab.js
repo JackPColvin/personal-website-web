@@ -4,10 +4,9 @@ import sass from './project-tab.module.scss'
 class ProjectTab extends React.Component{
     constructor(props){
         super(props)
-        console.log(props)
         this.state={
             project : props.project,
-            label : props.project.title
+            label : props.project.title,
         }
     }
 
@@ -15,20 +14,24 @@ class ProjectTab extends React.Component{
         const {label,onClick} = this.props
         onClick(label)
     }
+
     render(){
         const{
+            onClick,
             props:{
                 project,
                 activeTab,
                 label,
             }
         } = this
-        let className = "tabListItem"
+        let className = sass.tabListItem
         if(activeTab === label){
-            className += " tabListActive"
+            className = sass.tabListActive
         }
         return (
-            <div className={className}>
+            <div className={className}
+                onClick={onClick}
+            >
                 <div className={sass.top}>
                     {project.title}
                 </div>
