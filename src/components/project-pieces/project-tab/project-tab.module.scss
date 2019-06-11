@@ -1,0 +1,23 @@
+.tabListItem,.tabListActive{
+    border: 1px solid #AAA;
+}
+
+ol > div.tabListActive{
+    background-color:blue;
+}
+
+.top{
+    font-size: 25px;
+    color: #00F1FB;
+}
+.bottom{
+    color: #FFF;
+}
+
+.divider{
+    margin-bottom: 0;
+}
+
+ol{
+    margin: 0;
+}

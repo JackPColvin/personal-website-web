@@ -1,0 +1,47 @@
+@font-face{
+    font-family: "NationalPark";
+    src: url("../../fonts/NationalPark-Regular.otf") format("opentype");
+}
+.parallax{
+    background-image: url("../../images/firewatch.jpg");
+    height:100vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+}
+
+.bitmoji{
+    flex:1;
+    display: flex;
+}
+.bitmoji > .bitmojiImage{
+    margin: 0 auto;
+    // min-width: 30vw;
+    object-fit: scale-down;
+    // max-height: 700px;
+}
+
+.parallax > .funFacts{
+    flex:4;
+    min-height:50vh;
+    display: flex;
+}
+
+.title{
+    margin: 0 auto;
+    margin-top: 5vh;
+    text-align: center;
+    color:#5C3f3E;
+    font-family: "NationalPark";
+    font-size: 36px;
+    line-height: 3rem;
+    width: 60%;
+}
+
+.margin{
+    flex: 1;
+}

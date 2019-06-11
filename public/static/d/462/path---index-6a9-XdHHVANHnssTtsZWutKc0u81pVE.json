@@ -1,0 +1,1 @@
+{"errors":[{"message":"field \"image\" not found in type: 'projects'","locations":[{"line":3,"column":5}],"path":["personalgraphql","projects"]}],"data":{"personalgraphql":null},"pageContext":{"isCreatedByStatefulCreatePages":true}}
