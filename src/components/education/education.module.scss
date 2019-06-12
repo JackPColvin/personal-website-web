@@ -1,0 +1,49 @@
+.pane{
+    display:flex;
+    flex-direction:column;
+}
+
+.top{
+    flex:1;
+    background-color:maroon;
+}
+
+.middle{
+    flex:2;
+    background-color:gold;
+    display:flex;
+}
+
+.bottom{
+    flex: 1;
+    background-color:maroon;
+}
+
+.uogLogo{
+    margin: auto;
+    flex:1;
+    object-fit: contain;
+}
+
+.middleText{
+    font-size: 28px;
+    margin: auto;
+    flex:1;
+    line-height: 1.75rem;
+}
+
+.middleLogos{
+    display: flex;
+    flex-direction: column;
+}
+
+.additionalLogos{
+    display:flex;
+}
+
+.compLogo, .econLogo{
+    object-fit: fill;
+    flex:1;
+    margin: 0;
+    height: 100%;
+}
