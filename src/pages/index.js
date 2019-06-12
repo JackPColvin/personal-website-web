@@ -6,8 +6,8 @@ import Tao from "../components/tao/tao"
 import Intro from "../components/intro/intro"
 import Parallax from "../components/parallax/parallax"
 import Project from "../components/project/project"
-// import Education from "../components/education/education"
-// import Contact from "../components/contact/contact"
+import Education from "../components/education/education"
+import Contact from "../components/contact/contact"
 
 const rootTile = {
     display: "flex",
@@ -22,6 +22,8 @@ const IndexPage = ({data}) =>{
             <div style={rootTile}><Tao/></div>
             <div style={rootTile}> <Parallax /></div>
             <div style={rootTile}> <Project projects={data.personalgraphql.projects}/></div>
+            <div style={rootTile}> <Education /></div>
+            <div style={rootTile}> <Contact /></div>
         </Layout>  
     )
 }

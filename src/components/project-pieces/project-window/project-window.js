@@ -28,7 +28,7 @@ class ProjectWindow extends React.Component {
                         <div className={sass.title}>
                             {this.state.project.title}
                         </div>
-                        <div classname={sass.blurb}>
+                        <div className={sass.blurb}>
                             {this.state.project.blurb}
                         </div>
                     </div>
@@ -50,7 +50,7 @@ class ProjectWindow extends React.Component {
                 <div className={sass.description}>
                     {/* Bullets, for each */}
                     {this.state.project.bullets.bullets.map((e)=>{
-                        return (<div className={sass.bullet}>•{e}</div>)
+                        return (<div className={sass.bullet} key={e}>•{e}</div>)
                     })}
                 </div>          
                 

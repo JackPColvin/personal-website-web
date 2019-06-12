@@ -8,12 +8,12 @@ const Intro = () => (
         <ScrollAnimation
             animateIn="flipInY"
             offset={500}
+            animateOnce={true}
             className={sass.pane}
         >
             <p className={sass.title}>
-                <span className={sass.nametag}>
-                Jack Colvin:</span> <br />
-                Full Stack  <br /> Software Developer <br/>
+                <span className={sass.nametag}>Jack Colvin:</span> <br />
+                <span className={sass.nametag}>Full Stack Software Developer</span> <br />
             </p>
         </ScrollAnimation>
     </div>
