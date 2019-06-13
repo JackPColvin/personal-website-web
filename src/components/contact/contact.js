@@ -1,14 +1,7 @@
 import React from "react"
 import sass from './contact.module.scss'
 
-import ScrollAnimation from 'react-animate-on-scroll'
-
-
 class Contact extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return (
             <div className={sass.parallax}>
