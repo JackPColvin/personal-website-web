@@ -17,7 +17,7 @@ module.exports = {
       resolve: "gatsby-source-graphql",
       options: {
         fieldName: 'personalgraphql',
-        url: 'http://localhost:8080/v1/graphql',
+        url: process.env.GRAPHQL_API_KEY,
         typeName: 'PersonalGraphQL',
         refetchInterval: 60,
       }
