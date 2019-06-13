@@ -13,15 +13,6 @@ class ProjectTabs extends React.Component {
     }
 
     render() {
-        const {
-            props:{
-                children,
-            },
-            state: {
-                activeTab
-            },
-            onClickTabItem
-        } = this;
         return (
             <div className={sass.tabs}>
                 <ol className={sass.tabList}>

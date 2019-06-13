@@ -5,59 +5,60 @@ class ProjectWindow extends React.Component {
     constructor(props){
         super(props)
         this.state={
-            project: props.project
+            project: props.project,
+            queryFail: props.queryFail
         }
-        console.log(this.state.project)
     }
-
     
     changeRender(newProject){
         this.setState({project:newProject})
     }
 
     render(){
-        const {
-            state: {
-                project
-            }
-        } = this
-        return(
-            <div className={sass.window}>
-                <div className={sass.headline}>
-                    <div className={sass.headlineLeft}>
-                        <div className={sass.title}>
-                            {this.state.project.title}
+        if(this.state.queryFail !== true){
+            // const {
+            //     state: {
+            //         project
+            //     }
+            // } = this
+            return (
+                <div className={sass.window}>
+                    <div className={sass.headline}>
+                        <div className={sass.headlineLeft}>
+                            <div className={sass.title}>
+                                {this.state.project.title}
+                            </div>
+                            <div className={sass.blurb}>
+                                {this.state.project.blurb}
+                            </div>
                         </div>
-                        <div className={sass.blurb}>
-                            {this.state.project.blurb}
+                        <div className={sass.headlineRight}>
+                            <img className={sass.img} src={this.state.project.image_link} alt=""></img>
                         </div>
                     </div>
-                    <div className={sass.headlineRight}>
-                        <img className={sass.img} src={this.state.project.image_link}></img>
+                    <hr className={sass.bulletLine}></hr>
+                    <div className={sass.links}>
+                        {/* TODO: Replace these with buttons */}
+                        <div className={sass.linksSource}>
+                            Source Link: <a href={this.state.project.live_link}>HERE</a>
+                        </div>
+                        <div className={sass.linksLive}>
+                            Live Link: <a href={this.state.project.source_link}>HERE</a>
+                        </div>
                     </div>
-                </div>          
-                <hr className={sass.bulletLine}></hr>
-                <div className={sass.links}>
-                    {/* TODO: Replace these with buttons */}
-                    <div className={sass.linksSource}>
-                        Source Link: <a href={this.state.project.live_link}>HERE</a>
-                    </div>
-                    <div className={sass.linksLive}>
-                        Live Link: <a href={this.state.project.source_link}>HERE</a>
+                    <hr className={sass.bulletLine}></hr>
+                    <div className={sass.description}>
+                        {/* Bullets, for each */}
+                        {this.state.project.bullets.bullets.map((e) => {
+                            return (<div className={sass.bullet} key={e}>•{e}</div>)
+                        })}
                     </div>
                 </div>
-                <hr className={sass.bulletLine}></hr>
-                <div className={sass.description}>
-                    {/* Bullets, for each */}
-                    {this.state.project.bullets.bullets.map((e)=>{
-                        return (<div className={sass.bullet} key={e}>•{e}</div>)
-                    })}
-                </div>          
-                
-                
-                
-            </div>
-        )
+            )
+        } else{
+            return(<div className={sass.error}>Call to GraphQL endpoint failed.</div>)
+        }
+
     }
 }
 

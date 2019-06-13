@@ -1,22 +1,17 @@
 import React from "react"
 import sass from './education.module.scss'
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import UoGImg from "../../images/University_of_Guelph_logo.svg"
 
 import ScrollAnimation from 'react-animate-on-scroll'
 
 class Education extends React.Component {
-    constructor(props){
-        super(props)
-    }
-
     render(){
         return(
             <div className={sass.pane}>
                 <div className={sass.top}></div>
                 <div className={sass.middle}>
                     <div className={sass.middleLogos}>
-                        <img className={sass.uogLogo} src={UoGImg}></img>
+                        <img className={sass.uogLogo} src={UoGImg} alt=""></img>
                         {/* <div className={sass.additionalLogos}>
                             <div>
                                 <img src={CompLogo} className={sass.compLogo}></img>

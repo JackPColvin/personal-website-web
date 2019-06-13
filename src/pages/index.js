@@ -15,20 +15,25 @@ const rootTile = {
 }
 
 const IndexPage = ({data}) =>{
+    let queryFail = false
+    if(data.personalgraphql == null){
+        console.log(data)
+        data.personalgraphql = {projects:[]}
+        queryFail = true
+    }
     return (
         <Layout>
             <SEO title="Jack Colvin Developer"></SEO>
             <div style={rootTile}> <Intro /></div>
             <div style={rootTile}><Tao/></div>
             <div style={rootTile}> <Parallax /></div>
-            <div style={rootTile}> <Project projects={data.personalgraphql.projects}/></div>
+            <div style={rootTile}> <Project projects={data.personalgraphql.projects} queryFail={queryFail}/></div>
             <div style={rootTile}> <Education /></div>
             <div style={rootTile}> <Contact /></div>
         </Layout>  
     )
 }
 
-export default IndexPage
 
 export const query = graphql`
     query IndexQuery{
@@ -45,3 +50,5 @@ export const query = graphql`
         }
     }
 `
+
+export default IndexPage

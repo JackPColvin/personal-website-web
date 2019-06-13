@@ -1,6 +1,6 @@
 import React from "react"
 import sass from './project.module.scss'
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Element } from 'react-scroll'
 import ProjectTabs from "../project-pieces/project-tabs/project-tabs";
 import ProjectWindow from "../project-pieces/project-window/project-window";
 
@@ -8,9 +8,18 @@ import ProjectWindow from "../project-pieces/project-window/project-window";
 class Project extends React.Component {
     constructor(props){
         super(props)
-        this.state ={
-            projects:props.projects,
-            activeTab: props.projects[0].id,
+        if(props.queryFail === true){
+            this.state = {
+                projects: props.projects,
+                activeTab: null,
+                queryFail: props.queryFail
+            }
+        }else{
+            this.state ={
+                projects:props.projects,
+                activeTab: props.projects[0].id,
+                queryFail: props.queryFail
+            }
         }
         this.projectWindow = React.createRef()
     }
@@ -43,7 +52,7 @@ class Project extends React.Component {
                         <h1>Project Render</h1>
                     </div>
                     <div className={sass.mainBody}>
-                        <ProjectWindow project={this.state.projects[0]} ref={this.projectWindow} />
+                        <ProjectWindow project={activeProject} ref={this.projectWindow} queryFail={this.state.queryFail}/>
                     </div>
                 </div>
             </div>
