@@ -1,1 +1,0 @@
-{"errors":[{"message":"request to http://localhost:8080/v1/graphql failed, reason: read ECONNRESET","locations":[{"line":3,"column":5}],"path":["personalgraphql","projects"]}],"data":{"personalgraphql":null},"pageContext":{"isCreatedByStatefulCreatePages":true}}
