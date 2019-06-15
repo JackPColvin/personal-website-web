@@ -6,16 +6,19 @@ class Contact extends React.Component {
         return (
             <div className={sass.parallax}>
                 <div className={sass.pane}>
-                    <div className={sass.entry}>
-                        <div className={sass.text}>Let's Talk.</div>
-                    </div>
-                    <div className={sass.entry}>
-                        <div className={sass.text}>Email: jackcolvin@outlook.com</div>
-                    </div>
-                    <div className={sass.entry}>
-                        <div className={sass.text}>Phone: (705)-896-3119</div>
-                    </div>
                     <div></div>
+                    <div className={sass.entry}>
+                        <div className={sass.textTitle}>Let's Talk.</div>
+                    </div>
+                    <div>
+                    <div className={sass.entry}>
+                        <div className={sass.textInfo}>Email: jackcolvin@outlook.com</div>
+                    </div>
+                    <div className={sass.entry}>
+                        <div className={sass.textInfo}>Phone: (705)-896-3119</div>
+                    </div>
+
+                    </div>
                     <div></div>
                 </div>
             </div>

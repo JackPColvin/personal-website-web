@@ -21,3 +21,12 @@ ol > div.tabListActive{
 ol{
     margin: 0;
 }
+
+@media screen and (max-width:500px){
+    .top{
+        font-size:5vw;
+    }
+    .bottom{
+        font-size:3.5vw;
+    }
+}

@@ -26,9 +26,10 @@
     margin: auto auto;
     display:flex;
     justify-content: flex-end;
+    margin-bottom: .8vh;
 }
 
-.text{
+.textInfo,.textTitle{
     background-color:rgba(210,210,210,0.8);
     font-size:48px;
     line-height:2.5rem;
@@ -37,4 +38,119 @@
     min-height: 3rem;
     padding-top:1rem;
     margin: auto auto;
+}
+
+/* ----------- Baseline ----------- */
+@media only screen 
+  and (max-width: 360px) { 
+    .textInfo{
+        font-size: 5vw;
+    }
+    .textTitle{
+        font-size: 8vw;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (max-width: 360px) 
+  and (orientation: portrait) { 
+    .textInfo{
+        font-size: 5vw;
+    }
+    .textTitle{
+        font-size: 8vw;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (max-width: 360px) 
+  and (orientation: landscape) { 
+    .textInfo{
+        font-size: 5vw;
+    }
+    .textTitle{
+        font-size: 8vw;
+    }
+}
+
+/* ----------- Phones ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-width: 360px) 
+  and (max-width: 768px) { 
+    .textInfo{
+        font-size: 5vw;
+    }
+    .textTitle{
+        font-size: 8vw;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 360px) 
+  and (max-width: 768px) 
+  and (orientation: portrait) { 
+    .textInfo{
+        font-size: 5vw;
+    }
+    .textTitle{
+        font-size: 8vw;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-width: 360px) 
+  and (max-width: 768px) 
+  and (orientation: landscape) { 
+    .textInfo{
+        font-size: 4vh;
+    }
+    .textTitle{
+        font-size: 8vw;
+    }
+}
+
+/* ----------- Tablets ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px){
+    .textInfo{
+        font-size: 3vw;
+    }
+    .textTitle{
+        font-size: 8vw;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait){
+    .textInfo{
+        font-size: 3vw;
+    }
+    .textTitle{
+        font-size: 8vw;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: landscape){
+    .textInfo{
+        font-size: 3vh;
+    }
+    .textTitle{
+        font-size: 8vw;
+    }
 }

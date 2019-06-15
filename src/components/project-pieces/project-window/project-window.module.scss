@@ -79,3 +79,18 @@
     font-size: 30px;
     margin-top: 10px;
 }
+
+@media screen and (max-width: 500px){
+    .linksSource,.linksLive{
+        font-size: 3vw;
+    }
+    .description{
+        font-size: 4.2vw;
+    }
+    .title{
+        font-size: 9vw;
+    }
+    .blurb{
+        font-size: 5vw;
+    }
+}

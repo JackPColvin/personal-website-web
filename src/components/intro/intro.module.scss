@@ -1,7 +1,7 @@
-// flex-grow
-// flex-shrink
-// flex-basis
-
+@font-face{
+    font-family: "NationalPark";
+    src: url("../../fonts/NationalPark-Regular.otf") format("opentype");
+}
 
 .pane{
     flex: 1;
@@ -17,11 +17,17 @@
     font-size:60px;
     line-height: 6rem;
     margin-bottom:10vh;
-    margin: auto 60px;
+    margin: auto auto;
     color:white;
     text-align:left;
 }
 
 .nametag{
     // background-color:black;
+    line-height:3rem;
+    text-align:center;
+    color:rgb(110, 83, 48);
+    background-color: #111;
+    padding:3vh 2vw;
+    font-style: italic;
 }

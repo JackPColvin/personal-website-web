@@ -40,9 +40,69 @@
     font-family: "NationalPark";
     font-size: 36px;
     line-height: 3rem;
-    width: 60%;
+    max-width: 90%;
+    padding:2vh 8vw;
 }
 
-.margin{
-    flex: 1;
+/* ----------- Baseline ----------- */
+@media only screen 
+  and (max-width: 360px) { 
+    .title{
+        font-size: 4vw;
+        line-height: 1.2rem;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (max-width: 360px) 
+  and (orientation: portrait) { 
+    .title{
+        font-size: 4vw;
+        line-height: 1.2rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (max-height: 360px) 
+  and (orientation: landscape) { 
+    .title{
+        font-size: 2vh;
+        line-height: 1.2rem;
+    }
+}
+
+/* ----------- Phones ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-width: 360px) 
+  and (max-width: 768px) { 
+    .title{
+        font-size: 4vw;
+        line-height: 1.2rem;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 360px) 
+  and (max-width: 768px) 
+  and (orientation: portrait) { 
+    .title{
+        font-size: 4vw;
+        line-height: 1.2rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-height: 360px) 
+  and (max-height: 768px) 
+  and (orientation: landscape) { 
+    .title{
+        font-size: 4vh;
+        line-height: 1.5rem;
+    }
 }
