@@ -77,3 +77,67 @@ h1{
     margin-bottom: 200px;
     min-height: 60vh; 
 }
+
+
+/* ----------- Baseline ----------- */
+@media only screen 
+  and (max-width: 360px) { 
+    .sidebarTitleText,.mainTitleText{
+        font-size: 4vw;
+        line-height: 1.2rem;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (max-width: 360px) 
+  and (orientation: portrait) { 
+    .sidebarTitleText,.mainTitleText{
+        font-size: 4vw;
+        line-height: 1.2rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (max-height: 360px) 
+  and (orientation: landscape) { 
+    .sidebarTitleText,.mainTitleText{
+        font-size: 2vh;
+        line-height: 1.2rem;
+    }
+}
+
+/* ----------- Phones ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-width: 360px) 
+  and (max-width: 768px) { 
+    .sidebarTitleText,.mainTitleText{
+        font-size: 4vw;
+        line-height: 1.2rem;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 360px) 
+  and (max-width: 768px) 
+  and (orientation: portrait) { 
+    .sidebarTitleText,.mainTitleText{
+        font-size: 4vw;
+        line-height: 1.2rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-height: 360px) 
+  and (max-height: 768px) 
+  and (orientation: landscape) { 
+    .sidebarTitleText,.mainTitleText{
+        font-size: 4vh;
+        line-height: 1.5rem;
+    }
+}

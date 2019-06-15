@@ -12,14 +12,6 @@ class Education extends React.Component {
                 <div className={sass.middle}>
                     <div className={sass.middleLogos}>
                         <img className={sass.uogLogo} src={UoGImg} alt=""></img>
-                        {/* <div className={sass.additionalLogos}>
-                            <div>
-                                <img src={CompLogo} className={sass.compLogo}></img>
-                            </div>
-                            <div>
-                                <img src={EconLogo} className={sass.econLogo}></img>
-                            </div>
-                        </div> */}
                     </div>
                     <ScrollAnimation
                         animateIn="zoomIn"

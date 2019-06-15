@@ -12,6 +12,7 @@
     flex:2;
     background-color:gold;
     display:flex;
+    padding: 5vh 5vw;
 }
 
 .bottom{
@@ -26,24 +27,111 @@
 }
 
 .middleText{
-    font-size: 28px;
+    flex:2;
+    font-size: 24px;
     margin: auto;
-    flex:1;
     line-height: 1.75rem;
+    padding: 2vh 2vw;
 }
 
 .middleLogos{
+    flex:1;
     display: flex;
     flex-direction: column;
 }
 
-.additionalLogos{
-    display:flex;
+/* ----------- Baseline ----------- */
+@media only screen 
+  and (max-width: 360px) { 
+    .middleText > p{
+        font-size: 5vw;
+        line-height: 1rem;
+    }
 }
 
-.compLogo, .econLogo{
-    object-fit: fill;
-    flex:1;
-    margin: 0;
-    height: 100%;
+/* Portrait */
+@media only screen 
+  and (max-width: 360px) 
+  and (orientation: portrait) { 
+    .middleText > p{
+        font-size: 5vw;
+        line-height: 1rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (max-width: 360px) 
+  and (orientation: landscape) { 
+    .middleText > p{
+        font-size: 5vw;
+        line-height: 1rem;
+    }
+}
+/* ----------- Phones ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-width: 360px) 
+  and (max-width: 768px) { 
+    .middleText > p{
+        font-size: 5vw;
+        line-height: 1rem;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 360px) 
+  and (max-width: 768px) 
+  and (orientation: portrait) { 
+    .middleText > p{
+        font-size: 5vw;
+        line-height: 1rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-width: 360px) 
+  and (max-width: 768px) 
+  and (orientation: landscape) { 
+    .middleText > p{
+        font-size: 4vh;
+        line-height: 1rem;
+    }
+}
+
+/* ----------- Tablets ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px){
+    .middleText > p{
+        font-size: 3vw;
+        line-height: 1rem;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait){
+    .middleText > p{
+        font-size: 3vw;
+        line-height: 1rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: landscape){
+    .middleText > p{
+        font-size: 3vh;
+        line-height: 1rem;
+    }
 }

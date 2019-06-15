@@ -12,8 +12,8 @@ const Intro = () => (
             className={sass.pane}
         >
             <p className={sass.title}>
-                <span className={sass.nametag}>Jack Colvin:</span> <br />
-                <span className={sass.nametag}>Full Stack Software Developer</span> <br />
+                <div className={sass.nametag}>Jack Colvin:</div> <br />
+                <div className={sass.nametag}>Full Stack Software Developer</div> <br />
             </p>
         </ScrollAnimation>
     </div>

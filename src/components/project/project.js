@@ -38,7 +38,7 @@ class Project extends React.Component {
             <div className={sass.pane}>
                 <div className={sass.sidebar}>
                     <div className={sass.sidebarTitle}>
-                        <h1>Project List</h1>
+                        <h1 className={sass.sidebarTitleText}>Project List</h1>
                     </div>
                     <div className={sass.sidebarBody}>
                         {/* Scroll View, All projects from the endpoint */}
@@ -49,7 +49,7 @@ class Project extends React.Component {
                 </div>
                 <div className={sass.main}>
                     <div className={sass.mainTitle}>
-                        <h1>Project Render</h1>
+                        <h1 className={sass.mainTitleText}>Project Render</h1>
                     </div>
                     <div className={sass.mainBody}>
                         <ProjectWindow project={activeProject} ref={this.projectWindow} queryFail={this.state.queryFail}/>
