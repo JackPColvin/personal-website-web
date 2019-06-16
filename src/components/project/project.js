@@ -52,7 +52,9 @@ class Project extends React.Component {
                         <h1 className={sass.mainTitleText}>Project Render</h1>
                     </div>
                     <div className={sass.mainBody}>
-                        <ProjectWindow project={activeProject} ref={this.projectWindow} queryFail={this.state.queryFail}/>
+                        <Element className={"element ".concat(sass.mainScroll)} id="scroll-container">
+                            <ProjectWindow project={activeProject} ref={this.projectWindow} queryFail={this.state.queryFail}/>
+                        </Element>
                     </div>
                 </div>
             </div>
