@@ -40,10 +40,10 @@ class ProjectWindow extends React.Component {
                     <div className={sass.links}>
                         {/* TODO: Replace these with buttons */}
                         <div className={sass.linksSource}>
-                            Source Link: <a href={this.state.project.live_link}>HERE</a>
+                            <a href={this.state.project.source_link}>The Source Code</a>
                         </div>
                         <div className={sass.linksLive}>
-                            Live Link: <a href={this.state.project.source_link}>HERE</a>
+                            <a href={this.state.project.live_link}>The Live Site</a>
                         </div>
                     </div>
                     <hr className={sass.bulletLine}></hr>
