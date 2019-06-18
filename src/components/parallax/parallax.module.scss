@@ -3,13 +3,9 @@
     src: url("../../fonts/NationalPark-Regular.otf") format("opentype");
 }
 .parallax{
-    background-image: url("../../images/firewatch.jpg");
     height:100vh;
+    width: 100vw;
 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display:flex;
     flex-direction: column;
 }

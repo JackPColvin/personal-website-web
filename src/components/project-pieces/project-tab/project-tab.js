@@ -2,16 +2,11 @@ import React from "react"
 import sass from './project-tab.module.scss'
 
 class ProjectTab extends React.Component{
-    constructor(props){
-        super(props)
-        this.state={
-            project : props.project,
-            label : props.project.title,
-        }
-    }
-
     onClick = () => {
         const {label,onClick} = this.props
+        this.setState({
+            activeTab: this.props.activeTab
+        })
         onClick(label)
     }
 

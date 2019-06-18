@@ -17,38 +17,95 @@ const rootTile = {
 const IndexPage = ({data}) =>{
     let queryFail = false
     if(data.personalgraphql == null){
-        console.log(data)
         data.personalgraphql = {projects:[]}
         queryFail = true
     }
     return (
         <Layout>
-            <SEO title="Jack Colvin Developer"></SEO>
-            <div style={rootTile}> <Intro /></div>
-            <div style={rootTile}><Tao/></div>
-            <div style={rootTile}> <Parallax /></div>
-            <div style={rootTile}> <Project projects={data.personalgraphql.projects} queryFail={queryFail}/></div>
-            <div style={rootTile}> <Education /></div>
-            <div style={rootTile}> <Contact /></div>
+            <SEO
+                title="For Hire."
+            />
+            <div style={rootTile}><Intro tile={data.tile}/></div>
+            <div style={rootTile}><Tao tao={data.tao}/></div>
+            <div style={rootTile}><Parallax bitmoji={data.bitmoji} /></div>
+            <div style={rootTile}><Project projects={data.personalgraphql.projects} queryFail={queryFail}/></div>
+            <div style={rootTile}><Education logo={data.uogLogo} /></div>
+            <div style={rootTile}><Contact /></div>
         </Layout>  
     )
 }
 
 
 export const query = graphql`
-    query IndexQuery{
-        personalgraphql{
-            projects{
-                id
-                title
-                blurb
-                bullets
-                source_link
-                live_link
-                image_link
-            }
-        }
-    }
-`
+         query IndexQuery {
+           personalgraphql {
+             projects {
+               id
+               title
+               blurb
+               bullets
+               source_link
+               live_link
+               image_link
+             }
+           }
+           site {
+             siteMetadata {
+               title
+               description
+               author
+             }
+           }
+           tao: file(relativePath: { eq: "Tao_symbol.png" }) {
+             childImageSharp {
+               fluid(maxWidth: 1000) {
+                 ...GatsbyImageSharpFluid
+               }
+             }
+           }
+           firewatch: file(relativePath: { eq: "firewatch.jpg" }) {
+             childImageSharp {
+               fluid(maxWidth: 1000) {
+                 ...GatsbyImageSharpFluid
+               }
+             }
+           }
+           firewatch: file(relativePath: { eq: "firewatch.jpg" }) {
+             childImageSharp {
+               fluid(maxWidth: 1000) {
+                 ...GatsbyImageSharpFluid
+               }
+             }
+           }
+           contactParallax: file(relativePath: { eq: "contactParallax.jpg" }) {
+             childImageSharp {
+               fluid(maxWidth: 1000) {
+                 ...GatsbyImageSharpFluid
+               }
+             }
+           }
+           bitmoji: file(relativePath: { eq: "bitmoji.jpg" }) {
+             childImageSharp {
+               fluid(maxWidth: 1000) {
+                 ...GatsbyImageSharpFluid
+               }
+             }
+           }
+           tile: file(relativePath: { eq: "tile.jpg" }) {
+             childImageSharp {
+               fluid(maxWidth: 1000) {
+                 ...GatsbyImageSharpFluid
+               }
+             }
+           }
+           uogLogo: file(relativePath: { eq: "University_of_Guelph_logo.png" }) {
+             childImageSharp {
+               fluid(maxWidth: 1000) {
+                 ...GatsbyImageSharpFluid
+               }
+             }
+           }
+         }
+       `;
 
 export default IndexPage

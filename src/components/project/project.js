@@ -26,6 +26,7 @@ class Project extends React.Component {
 
     onClickTabItem = (tab) => {
         let newProject = this.state.projects.filter(proj => proj.id === tab)[0]
+        console.log(tab)
         this.setState({ 
             activeTab: tab,
         })
