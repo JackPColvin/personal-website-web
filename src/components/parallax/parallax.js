@@ -19,13 +19,14 @@ const Parallax = ({ className,data }) => (
     }`}
     render={data => {
       const imageData = data.firewatch.childImageSharp.fluid
-      return(
-        <BackgroundImage Tag="section"
+      return (
+        <BackgroundImage
+          Tag="section"
           className={className}
           fluid={imageData}
           backgroundColor={`#040e18`}
         >
-          < div className={sass.parallax} >
+          <div className={sass.parallax}>
             <ScrollAnimation
               className={sass.funFacts}
               animateIn="fadeIn"
@@ -33,12 +34,18 @@ const Parallax = ({ className,data }) => (
               offset={0}
               delay={100}
             >
-              <p className={sass.title}>
-                Aside from quality time in nature, there's nothing I enjoy more than
-        building software. <br /> <br />
-                Below, you can find some of my projects and a summary of my education.{" "}
+              <div className={sass.title}>
+                <p>
+                  Aside from quality time in nature, there's nothing I enjoy
+                  more than building software.
+                </p>{" "}
                 <br />
-              </p>
+                <p>
+                  Below, you can find some of my projects and a summary of my
+                  education.
+                </p>{" "}
+                <br />
+              </div>
             </ScrollAnimation>
             <ScrollAnimation
               className={sass.bitmoji}
@@ -49,9 +56,9 @@ const Parallax = ({ className,data }) => (
             >
               <img src={Bitmoji} className={sass.bitmojiImage} alt="" />
             </ScrollAnimation>
-          </div >
+          </div>
         </BackgroundImage>
-      )
+      );
     }}
   />
 
