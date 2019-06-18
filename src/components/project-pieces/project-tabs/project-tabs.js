@@ -4,14 +4,6 @@ import sass from './project-tabs.module.scss'
 import ProjectTab from '../project-tab/project-tab'
 
 class ProjectTabs extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            activeTab: this.props.activeTab,
-            onClick: this.props.onClick
-        }
-    }
-
     render() {
         return (
             <div className={sass.tabs}>
@@ -20,11 +12,11 @@ class ProjectTabs extends React.Component {
                         this.props.children.map((child) => {
                             return (
                                 <ProjectTab
-                                    activeTab={this.state.activeTab}
+                                    activeTab={this.props.activeTab}
                                     project = {child}
                                     key = {child.id}
                                     label = {child.id}
-                                    onClick={this.state.onClick}
+                                    onClick={this.props.onClick}
                                 >
                                 </ProjectTab>
                             )
