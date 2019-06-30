@@ -40,8 +40,8 @@ class Education extends React.Component{
                   Economics.
                 </p>
                 <p>
-                  Jack was nominated for University of Guelph's Department of
-                  Economics and Finance Fourth Year Writing prize. His essay is
+                  Jack was awarded University of Guelph's Department of
+                  Economics and Finance Fourth Year Writing prize. The winning essay is  
                   available{" "}
                   <a href="https://jcolvin-personal-static-files.s3.ca-central-1.amazonaws.com/Essay.pdf">
                     here
