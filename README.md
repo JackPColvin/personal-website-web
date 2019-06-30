@@ -54,8 +54,6 @@ The recommended solution is to consult https://www.github.com/JackPColvin/person
 |Page|Component|Test|
 | - | - | - |
 | - | - | - |
-| - | - | - |
-| - | - | - |
 
 
 ## 3) Additional
@@ -63,8 +61,6 @@ The recommended solution is to consult https://www.github.com/JackPColvin/person
 |Documentation| Link |
 | - | - |
 | Gatsby Docs | https://www.gatsbyjs.org/docs/ |
-| React Component Docs | https://www.gatsbyjs.org/docs/ |
-| Gatsby Docs | https://www.gatsbyjs.org/docs/ |
-| Gatsby Docs | https://www.gatsbyjs.org/docs/ |
-
+| React Docs | https://reactjs.org/docs/ |
+|The Best GraphQL Docs|https://www.howtographql.com/|
 ***

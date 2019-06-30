@@ -58,14 +58,7 @@ export const query = graphql`
            }
            tao: file(relativePath: { eq: "Tao_symbol.png" }) {
              childImageSharp {
-               fluid(maxWidth: 1000) {
-                 ...GatsbyImageSharpFluid
-               }
-             }
-           }
-           firewatch: file(relativePath: { eq: "firewatch.jpg" }) {
-             childImageSharp {
-               fluid(maxWidth: 1000) {
+               fluid(maxWidth: 500) {
                  ...GatsbyImageSharpFluid
                }
              }
@@ -86,21 +79,21 @@ export const query = graphql`
            }
            bitmoji: file(relativePath: { eq: "bitmoji.jpg" }) {
              childImageSharp {
-               fluid(maxWidth: 1000) {
+               fluid(maxWidth: 500) {
                  ...GatsbyImageSharpFluid
                }
              }
            }
            tile: file(relativePath: { eq: "tile.jpg" }) {
              childImageSharp {
-               fluid(maxWidth: 1000) {
+               fluid(maxWidth: 300) {
                  ...GatsbyImageSharpFluid
                }
              }
            }
            uogLogo: file(relativePath: { eq: "University_of_Guelph_logo.png" }) {
              childImageSharp {
-               fluid(maxWidth: 1000) {
+               fluid(maxWidth: 800) {
                  ...GatsbyImageSharpFluid
                }
              }
