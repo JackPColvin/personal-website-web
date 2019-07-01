@@ -7,9 +7,9 @@ import "animate.css/animate.min.css"
 const Intro = ({ className }) => (
   <StaticQuery query={graphql`
       query {
-        desktop: file(relativePath: { eq: "tile.jpg" }) {
+        desktop: file(relativePath: { eq: "intro-pattern.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
+            fluid(quality: 100, maxWidth: 400) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -24,11 +24,12 @@ const Intro = ({ className }) => (
             Tag="section"
             style={{
               width: "100vw",
-              backgroundSize: "33% auto",
+              backgroundSize: "3% auto",
               backgroundAttachment: "fixed",
               backgroundRepeat: "1",
               display: "flex",
-              flexDirection: "column"
+              flexDirection: "column",
+              backgroundColor: "black"
             }}
             fluid={imageData}
           >
