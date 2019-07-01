@@ -84,13 +84,6 @@ export const query = graphql`
                }
              }
            }
-           tile: file(relativePath: { eq: "tile.jpg" }) {
-             childImageSharp {
-               fluid(maxWidth: 300) {
-                 ...GatsbyImageSharpFluid
-               }
-             }
-           }
            uogLogo: file(relativePath: { eq: "University_of_Guelph_logo.png" }) {
              childImageSharp {
                fluid(maxWidth: 800) {
